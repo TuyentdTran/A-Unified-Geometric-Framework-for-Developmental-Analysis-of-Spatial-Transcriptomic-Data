@@ -1,0 +1,12 @@
+numpy~=2.3.2
+networkx~=3.5
+scikit-learn~=1.7.1
+matplotlib~=3.10.5
+scipy~=1.16.1
+geometric_clustering~=1.0
+tqdm~=4.67.1
+PyGenStability~=0.2.5
+geocluster~=1.0.1
+pandas~=2.3.1
+joblib~=1.5.1
+setuptools~=80.9.0
