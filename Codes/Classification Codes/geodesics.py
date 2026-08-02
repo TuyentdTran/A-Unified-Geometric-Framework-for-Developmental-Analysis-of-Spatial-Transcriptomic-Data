@@ -8,7 +8,7 @@ import networkx as nx
 from scipy import sparse
 import os
 import sys
-from curvature import compute_curvatures
+#from curvature import compute_curvatures
 
 def compute_GW_geodesic(D1, D2, t_values, N):
   """Compute the Gromov-Wasserstein geodesic between two distance matrices D1 and D2 using 

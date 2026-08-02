@@ -40,10 +40,6 @@ STAGE_T = {
 }
 
 
-# ---------------------------------------------------------------------------
-# Extract reference curvature vectors from curvature_evolution_real
-# ---------------------------------------------------------------------------
-
 def extract_reference_distributions(curvature_evolution_real, stage_t_map=STAGE_T):
     """
     Pull one curvature vector per stage from curvature_evolution_real
@@ -72,10 +68,6 @@ def extract_reference_distributions(curvature_evolution_real, stage_t_map=STAGE_
 
     return ref_distributions
 
-
-# ---------------------------------------------------------------------------
-# Core classification function
-# ---------------------------------------------------------------------------
 
 def classify_slices_against_real(
     curvature_by_slice,
@@ -157,19 +149,14 @@ def classify_slices_against_real(
 
             if method == 'scalar':
                 # Scalar: reference distribution plays the role of 'geo_vals'
-                # in _scalar_delta_shared, i.e. its std is used for normalisation
                 d = _scalar_delta_shared(slice_vals, ref_vals, stat=scalar_stat)
 
             elif method == 'wasserstein':
-                # Raw values — no standardization, so location and scale
-                # differences between the 171-node reference and 837-node
-                # slice contribute to the discrepancy alongside shape
+                # Raw values — no standardization, so location and scal
                 d = _wasserstein_delta(slice_vals, ref_vals)
 
             else:  # 'kl'
                 # Standardize using the reference distribution's statistics
-                # (reference plays the role of 'geodesic' in shared convention)
-                # to focus KL on shape differences rather than scale offsets
                 a_s, b_s = _standardize_shared(slice_vals, ref_vals)
                 d = _kl_delta(a_s, b_s, bandwidth=kl_bandwidth)
 
@@ -191,7 +178,6 @@ def classify_slices_against_real(
             predicted_rank=pred_rank,
             min_discrepancy=discrepancies[predicted_stage],
         )
-        # Store per-stage discrepancy for inspection / distance matrix plotting
         for s in ref_stages:
             row[f'd_{s}'] = discrepancies[s]
 
@@ -247,10 +233,6 @@ def classify_slices_against_real(
     return results_df, summary
 
 
-# ---------------------------------------------------------------------------
-# Confusion matrix
-# ---------------------------------------------------------------------------
-
 def confusion_matrix_df(results_df, stage_order=STAGE_ORDER):
     """
     Return a DataFrame confusion matrix with true stages as rows and
@@ -266,10 +248,6 @@ def confusion_matrix_df(results_df, stage_order=STAGE_ORDER):
     cm.index.name = 'True \\ Predicted'
     return cm
 
-
-# ---------------------------------------------------------------------------
-# Run all three methods and print a comparison table
-# ---------------------------------------------------------------------------
 
 def compare_methods_slice_classification(
     curvature_by_slice,
