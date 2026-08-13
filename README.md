@@ -4,7 +4,7 @@
 
 ### Developmental trends using GW Geodesics and Ollivier–Ricci curvature 
 
-Here the file GW Geodesic Ricci - Fruit Fly Ex3.ipynb contains the code used to generate the example in section 4.3. Here we implement the algorithm described in section 3.1.1  in the file geodesics.py. In summary this notebook does the following: 
+Here the file Drosophilia GW Geodesics and Ricci curvatures.ipynb contains the code used to generate the example in section 4.3. Here we implement the algorithm described in section 3.1.1  in the file geodesics.py. In summary this notebook does the following: 
   1. Uses fruit fly high value gene data to construct gene networks for the fruit fly stages E14-16, E16-18, Larvae 1, Larvae 2, and Larvae 3. 
   2. Geodesics between the stages are computed.
   3. The algorithm in section 3.1.1 is applied to construct gene networks for the geodesics.
