@@ -2,6 +2,12 @@
 
 ## Codes 
 
+### Preprocessing 
+
+ - Wisdm_corr_matrix_revised.ipynb implements the preprocessing procedure described in section 4.1.
+ - wisdm_coot.ipynb contains the code to generate the results for section 4.5
+ - Wisdm_corr_matrix_slice_ids.ipynb implements the preprocessing procedure described in appendix B.2
+
 ### Developmental trends using GW Geodesics and Ollivier–Ricci curvature 
 
 Here the file Drosophilia GW Geodesics and Ricci curvatures.ipynb contains the code used to generate the example in section 4.3. The figures 6,7 and 13 and tables 2 and 4 are generated from this files.  The file geodesics.py implements the algorithm described in section 3.1.1.
