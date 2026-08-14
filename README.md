@@ -3,7 +3,7 @@ Spatial Transcriptomic Data
 
 ## Authors 
 Mary Chriselda Antony Oliver, Kaitlyn Hohmeier, Tuyen Tran, Alejandra Castillo,
-Caroline Moosmuller, Shiying Li
+Caroline Moosmüller, Shiying Li
 
 ## Codes 
 
