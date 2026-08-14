@@ -38,7 +38,7 @@ The file Drosophila Classification - Final Version.ipynb contains the code used 
 
 This folder contains the analysis used for the dynamic Ollivier--Ricci curvature results in Sections 3.4 and 4.4. The scripts do the following:
 
-  1. Computes distance-scaled dynamic OR curvature at 19 log-spaced diffusion scales from 0.01 to 10.
-  2. Computes stage summaries, pairwise Wasserstein distances, log-scale averages, and the consecutive-transition counts.
-  3. Creates the ECDF figures and the appendix histogram/KDE figures. 
+  1. Compute distance-scaled dynamic OR curvature at 19 log-spaced diffusion scales from 0.01 to 10.
+  2. Compute stage summaries, pairwise Wasserstein distances, log-scale averages, and the consecutive-transition counts.
+  3. Create the ECDF figures and the appendix histogram/KDE figures. 
 
