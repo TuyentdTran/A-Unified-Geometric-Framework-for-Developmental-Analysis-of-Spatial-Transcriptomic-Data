@@ -1,4 +1,9 @@
-# Optimal-Transport-Based-Curvature
+# A Unified Geometric Framework for Developmental Analysis of
+Spatial Transcriptomic Data
+
+## Authors 
+Mary Chriselda Antony Oliver, Kaitlyn Hohmeier, Tuyen Tran, Alejandra Castillo,
+Caroline Moosmuller, Shiying Li
 
 ## Codes 
 
