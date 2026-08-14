@@ -33,3 +33,12 @@ The file Drosophila Classification - Final Version.ipynb contains the code used 
   2. After computing geodesics between E14-16 and L3, we compute the Ollivier-Ricci curvature distributions for all data: the five prototype graphs, the 40 Gromov-Wasserstein geodesics, and the 50 gene expression networks corresponding to spatial slices at each temporal stage.
   3. Rank ordering is then performed on the 50 spatial slices by comparing their curvature distributions with those of the 40 Gromov-Wasserstein geodesics and plot the results.
   4. Classification is then performed on the 50 spatial slices by comparing their curvature distributions with those of the five prototype graphs for each developmental stage and plot the results.
+
+### Dynamic OR Curvature
+
+This folder contains the analysis used for the dynamic Ollivier--Ricci curvature results in Sections 3.4 and 4.4.  The scripts use the existing `Data/full_correlations/` files and `geometric_clustering/` curvature implementation in the repository. The scripts do the following:
+
+  1. Computes distance-scaled dynamic OR curvature at 19 log-spaced diffusion scales from 0.01 to 10.
+  2. Computes stage summaries, pairwise Wasserstein distances, log-scale averages, and the consecutive-transition counts.
+  3. Creates the ECDF figures and the appendix histogram/KDE figures. 
+
