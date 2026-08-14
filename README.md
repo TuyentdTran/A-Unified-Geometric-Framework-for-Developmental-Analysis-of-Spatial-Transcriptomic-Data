@@ -1,5 +1,6 @@
-# A Unified Geometric Framework for Developmental Analysis of
-Spatial Transcriptomic Data
+# A Unified Geometric Framework for Developmental Analysis of Spatial Transcriptomic Data
+
+This repository accompanies the paper *A Unified Geometric Framework for Developmental Analysis of Spatial Transcriptomic Data*
 
 ## Authors 
 Mary Chriselda Antony Oliver, Kaitlyn Hohmeier, Tuyen Tran, Alejandra Castillo,
