@@ -1,29 +1,18 @@
 """
-Classifies real graphs to geodesic time points using OR curvature distributions,
-with SHARED (geodesic-referenced) standardization applied before every pairwise
-comparison.
+Rank-order real graphs using OR curvature distributions of both the real graphs and
+the geodesics, with SHARED standardization applied before every pairwise comparison.
 
-Standardization convention
---------------------------
-Before each pairwise discrepancy is computed, both distributions are
-standardized using the mean and standard deviation of the geodesic
+Both distributions are standardized using the mean and standard deviation of the geodesic
 distribution at that time point:
 
     a_s = (a - mu_geo) / sigma_geo     [real graph, shifted into geodesic space]
     b_s = (b - mu_geo) / sigma_geo     [geodesic, which becomes zero-mean, unit-variance]
 
-This ensures that the geodesic distribution is centred at zero with unit variance, 
-while preserving the relative displacement of the real graph distribution from the
-geodesic reference. Concretely: if a real graph's curvature is shifted
-0.3 standard deviations above the geodesic at t=0.25 but only 0.05
-above the geodesic at t=0.75, that signal is retained and contributes
-to the assignment.
+This centers the geodesic distribution at zero with unit variance, while preserving the 
+relative displacement of the real graph distribution from the geodesic reference.
 
-Scalar methods
-------------------------------------
-Under shared standardization, the scalar methods measure how many geodesic
-standard deviations the real graph's summary statistic lies from the
-geodesic's summary statistic. Specifically:
+The scalar methods measure how many geodesic standard deviations the real graph's summary 
+statistic lies from the geodesic's summary statistic:
 
     scalar-mean   : |mean(real) - mean(geo)| / sigma_geo
     scalar-median : |median(real) - median(geo)| / sigma_geo
