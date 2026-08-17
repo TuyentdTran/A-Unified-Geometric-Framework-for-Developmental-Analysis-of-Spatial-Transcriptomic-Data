@@ -2,10 +2,6 @@
 
 This repository accompanies the paper *A Unified Geometric Framework for Developmental Analysis of Spatial Transcriptomic Data*
 
-## Authors 
-Mary Chriselda Antony Oliver, Kaitlyn Hohmeier, Tuyen Tran, Alejandra Castillo,
-Caroline Moosmüller, Shiying Li
-
 ## Codes 
 
 ### Preprocessing 
